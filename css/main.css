@@ -1,5 +1,3 @@
-
-
-/* .root{
-
-} */
+@import '../css/setup.css';
+@import '../css/cmps/AppHeader.css';
+@import '../css/cmps/AppFooter.css';
