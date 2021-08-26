@@ -1,3 +1,6 @@
-@import '../css/setup.css';
+@import './setup.css';
 @import '../css/cmps/AppHeader.css';
 @import '../css/cmps/AppFooter.css';
+@import '../css/cmps/AppHome.css';
+@import '../css/cmps/AppAbout.css';
+@import '../css/apps/keep/KeepPreview.css';

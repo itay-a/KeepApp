@@ -1,0 +1,22 @@
+.app-header {
+    height: 80px;
+    background-color:lightskyblue; 
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.app-header :first-child {
+    padding-left: 30px;
+}
+
+.app-header nav {
+    padding-right: 30px;
+}
+
+.app-header nav>*:not(:last-child) {
+    padding-right: 20px;
+}
+
