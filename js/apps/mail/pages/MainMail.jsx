@@ -1,7 +1,7 @@
 import { MailFilter } from "../cmps/MailFilter.jsx";
 import { MailList } from "../cmps/MailList.jsx"
 import { MailService } from "../services/mail.service.js"
-
+import { MailDetails } from "../cmps/MailDetails.jsx";
 export class MainMail extends React.Component {
 
     state = {
@@ -34,6 +34,7 @@ export class MainMail extends React.Component {
             <section className='main-mail'>
                 <MailFilter onSetFilter={this.onSetFilter}/>
                 <MailList mails={mails} />
+                
             </section>
         )
     }
