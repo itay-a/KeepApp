@@ -8,10 +8,9 @@ class _AppFooter extends React.Component {
     render() {
         return (
 
-            <section className="app-header">
-                <h1>CHECK</h1>
-
-
+            <section className="app-footer">
+                <h1>Footer</h1>
+                <p>Coffee Rights Black</p>
             </section>
 
         )

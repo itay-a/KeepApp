@@ -1,7 +1,10 @@
 @import './setup.css';
 @import './cmps/AppHeader.css';
 @import './mail/main.mail.css';
-/* @import './cmps/AppFooter.css'; */
+@import './cmps/AppFooter.css';
+@import './cmps/AppHome.css';
+@import './cmps/AppAbout.css';
+@import './apps/keep/KeepPreview.css';
 
 /* .mail-list{
 
