@@ -13,12 +13,11 @@
   h1 {
     padding-left: 30px;
   }
+  
   p {
     padding-right: 30px;
   }
 
-
-  
   .input-container {
     background-color: aliceblue;
     display: flex;

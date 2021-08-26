@@ -1,11 +1,28 @@
-const { Link } = ReactRouterDOM
+import { KeepTxt } from './KeepTxt.jsx';
+import { KeepImg } from './KeepImg.jsx';
+import {KeepTodo } from './KeepTodo.jsx';
 
-export function KeepPreview({keep}) {
+export class KeepPreview extends React.Component {
 
-    return (
-        <div className="keep-preview">
-            <h4>id - {keep.id}</h4>
-            <h4>info - {keep.type}</h4>
-        </div>
-    )
+    get keepType() {
+        return this.props.keep.type;
+    }
+
+    render() {
+        const DynamicCmp = (props) => {
+            switch (this.keepType) {
+                case 'note-txt':
+                    return <KeepTxt {...props} />
+                case 'note-img':
+                    return <KeepImg {...props} />
+                case 'note-todos':
+                    return <KeepTodo {...props} />
+            }
+        }
+        const { props } = this;
+
+        return (
+            <DynamicCmp {...props} />
+        )
+    }
 }

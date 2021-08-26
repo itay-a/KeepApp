@@ -1,7 +1,7 @@
 const { Link } = ReactRouterDOM
 
 import { keepService } from "../services/keep.service.js";
-import { eventBusService } from "../services/event-bus-service.js";
+// import { eventBusService } from "../services/event-bus-service.js";
 
 export class KeepDetails extends React.Component {
 
@@ -19,7 +19,6 @@ export class KeepDetails extends React.Component {
     }   
   }
   
-
   loadKeep = () => {
     const id = this.props.match.params.keepId
     keepService.getKeepById(id)
@@ -27,12 +26,11 @@ export class KeepDetails extends React.Component {
         if (!keep) this.props.history.push('/')
         this.setState({ keep })
       })
-
   }
 
   onDeleteKeep = () => {
     keepService.deleteKeep(this.state.keep.id).then(this.onBack)
-    // eventBusService.emit('user-msg', {txt:'keep deleted!', type:'danger'})
+    // eventBusService.emit('user-msg', {txt:'keep deleted!'})
   }
 
   onBack = () => {
@@ -40,20 +38,10 @@ export class KeepDetails extends React.Component {
   }
 
   render() {
-    console.log('RENDERD!');
     const { keep } = this.state
     if (!keep) return <div>Loading...</div>
     return (
       <section className='keep-details'>
-        <h2>Id: {keep.id}</h2>
-        {/* <h4>Type: {keep.type}</h4> */}
-        {/* <Link to={`/keep/edit/${keep.id}`}>Edit Keep</Link>
-        <section className="actions">
-          <button onClick={this.onBack}>Go Back</button>
-          <button onClick={this.onDeleteKeep}>
-            Delete keep
-        </button>
-        </section> */}
       </section>
     );
   }

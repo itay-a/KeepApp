@@ -12,12 +12,11 @@ export class KeepFilter extends React.Component {
     document.querySelector('input').focus()
   }
 
-
   handleChange = (ev) => {
     const field = ev.target.name;
     const value = ev.target.type;
     this.setState({ filterBy: { [field]: value } }, () => {
-      this.props.onSetFilter(this.state.filterBy)
+    this.props.onSetFilter(this.state.filterBy)
     });
   };
 
@@ -27,10 +26,7 @@ export class KeepFilter extends React.Component {
   };
 
   onSelectFilter = (ev) => {
-    console.log(ev);
     const type = ev.target.name;
-    console.log(type);
-
   }
 
   render() {

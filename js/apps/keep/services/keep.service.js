@@ -8,39 +8,7 @@ export const keepService = {
     query,
 }
 
-// _creatNotes()
-
-
-function query(filterBy) {
-    if (filterBy) {
-        let { type } = filterBy
-        const filteredNotes = notes.filter(note => {
-            return note.type.includes(type)
-        })
-        return Promise.resolve(filteredNotes)
-    }
-    return Promise.resolve(notes)
-}
-
-// function _creatNotes() {
-//     var loadNotes = storageService.loadFromStorage(KEY)
-//     if (!loadNotes || !loadNotes.length) {
-//         loadNotes = notes
-//     }
-//     else {
-//         notes = loadNotes;
-//     }
-//     _saveNotesToStorage()
-// }
-
-
-// function _saveNotesToStorage() {
-//     storageService.saveToStorage('note', notes)
-// }
-
-// _saveNotesToStorage();
-
-const notes = [
+let notes = [
     {
         id: "n101",
         type: "note-txt",
@@ -51,7 +19,7 @@ const notes = [
     {
         id: "n102",
         type: "note-img",
-        info: { url: "http://some-img/me", title: "Bobi and Me" },
+        info: { url: "https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2019/10/08113321/Dog-behavior-Kasper-Luijsterburg.jpg", title: "Bobi and Me" },
         style: { backgroundColor: "#00d" }
     },
 
@@ -67,3 +35,37 @@ const notes = [
         }
     }
 ];
+
+_creatNotes()
+
+
+function query(filterBy) {
+    if (filterBy) {
+        let { type } = filterBy
+        const filteredNotes = notes.filter(note => {
+            return note.type.includes(type)
+        })
+        return Promise.resolve(filteredNotes)
+    }
+    return Promise.resolve(notes)
+}
+
+function _creatNotes() {
+    let loadNotes = storageService.loadFromStorage(KEY)
+    if (!loadNotes || !loadNotes.length) {
+        loadNotes = notes
+    }
+    else {
+        notes = loadNotes;
+    }
+
+    _saveNotesToStorage()
+}
+
+
+function _saveNotesToStorage() {
+    storageService.saveToStorage('note', notes)
+}
+
+_saveNotesToStorage();
+

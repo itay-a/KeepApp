@@ -12,12 +12,6 @@ export class KeepApp extends React.Component {
   };
 
   componentDidMount() {
-    // const urlSrcPrm = new URLSearchParams(this.props.location.search)
-    // const res = urlSrcPrm.get('q')
-    // for (const [key, val] of urlSrcPrm) {
-    //   console.log('key: ', key);
-    //   console.log('val: ', val);
-    // }
     this.loadKeeps()
   }
 
@@ -36,23 +30,17 @@ export class KeepApp extends React.Component {
     return urlSrcPrm.get('ctg')
   }
 
-
   get keepsToDisplay() {
     const { keeps } = this.state
     const ctg = this.urlParamCtg
     return keeps.filter(keep => !ctg || keep.ctg === ctg)
   }
 
-
-
   render() {
 
     return (
       <section className='keep-app'>
         <KeepFilter onSetFilter={this.onSetFilter} />
-        {/* <section>
-          <Link to="/keep/edit">Add Keep</Link>
-        </section> */}
         <KeepList keeps={this.keepsToDisplay} onSelectKeep={this.onSelectKeep} />
       </section>
     );

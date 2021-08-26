@@ -1,4 +1,3 @@
-
 const Router = ReactRouterDOM.HashRouter;
 const { Route, Switch } = ReactRouterDOM;
 import { AppFooter } from './js/cmps/AppFooter.jsx'
@@ -7,10 +6,6 @@ import  MailApp  from './js/pages/MailApp.jsx'
 import { KeepApp } from './js/pages/KeepApp.jsx';
 import { Home } from './js/pages/Home.jsx';
 import { About } from './js/pages/About.jsx';
-
-
-
-
 
 export function App() {
 
