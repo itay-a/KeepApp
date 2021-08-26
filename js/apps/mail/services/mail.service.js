@@ -17,7 +17,7 @@ function query(filterBy) {
     if (filterBy) {
         let {text} = filterBy
         const mailsToShow = gMails.filter(mail => {
-            return mail.text.includes(text)
+            return mail.body.toLowerCase().includes(text) || mail.subject.toLowerCase().includes(text)
         })
         return Promise.resolve(mailsToShow);
     }

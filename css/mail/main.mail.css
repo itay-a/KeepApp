@@ -1,0 +1,26 @@
+.main-mail {
+  margin: 10px;
+}
+.mail-list{
+
+  width: 80%;
+  
+  
+  gap: 9px;
+}
+.mail-preview{
+  /* text-align: left; */
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    padding: 2px;
+    text-align: center; 
+}
+
+.mail-preview h3 {
+    text-align: left;
+    cursor:pointer;
+}
+.mail-filter input{
+  width: 20%;
+  height: 4%;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
