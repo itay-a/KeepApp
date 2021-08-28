@@ -1,15 +1,21 @@
 .main-mail {
   margin: 10px;
+  display: flex;
+  gap:20px;
 }
-.mail-list{
 
-  width: 80%;
-  
-  
+.mail-list{
+  margin-left: 10px;
+  width: 60%;
   gap: 9px;
 }
+
 .mail-preview{
   /* text-align: left; */
+  border: 0.1px solid;
+    margin: 1px;
+    border-radius: 7px;
+    background-color:rgb(255, 255, 255);
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     padding: 2px;
     text-align: center; 
@@ -19,8 +25,34 @@
     text-align: left;
     cursor:pointer;
 }
+
 .mail-filter input{
+  margin-left: 22px;
   width: 20%;
-  height: 4%;
+  height: 10%;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+input{ 
+  width: 100%;
+  padding: 12px 12px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+button {
+  content: '📧';
+  padding: 12px 12px;
+  cursor: pointer;
+}
+
+.app-footer h1{
+  content: '📧';
+}
+
+.add-filter{
+
+}
+.compose-mail {
+  margin-left: 10px;
 }

@@ -27,9 +27,10 @@ export class MailFilter extends React.Component {
             <form className="mail-filter" onSubmit={this.onFilter}>
                 <label htmlFor="by-text"></label>
                 <input name="text" id="by-text" type="text" placeholder="search text" value={text} onChange={this.handleChange}/>
-                <button>Filter</button>
+                <button>
+                    <span>📧</span>
+                </button>
             </form>
         )
     }
-
 }
