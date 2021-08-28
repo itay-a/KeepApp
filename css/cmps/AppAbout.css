@@ -1,5 +1,15 @@
 
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 p {
+    width: 60%;
     text-align: center;
+    padding-left: auto;
+    padding-right: auto;
 }
