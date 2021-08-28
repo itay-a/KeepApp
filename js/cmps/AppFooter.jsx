@@ -10,7 +10,7 @@ class _AppFooter extends React.Component {
 
             <section className="app-footer">
                 <h1>Footer</h1>
-                <p>Coffee Rights Black</p>
+                <span>Coffee Rights Black</span>
             </section>
 
         )

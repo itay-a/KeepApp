@@ -1,9 +1,19 @@
+/* .home {
+    height: 70%;
+} */
+
 h1 {
-text-align: center;
+    text-align: center;
+    font-size: xx-large;
 }
 
 h3 {
     text-align: center;
+}
+
+a {
+    line-height: 200px;
+    vertical-align: middle;
 }
 
 .links-to-pages {
@@ -11,11 +21,11 @@ h3 {
     flex-direction: row;
     gap: 10px;
     justify-content: center;
-    margin-top:30px
+    margin-top: 30px
 }
 
 .link {
-        display: flex;
+    display: flex;
     flex-wrap: wrap;
     width: 200px;
     background-color: lightskyblue;
@@ -26,4 +36,3 @@ h3 {
     font-size: 50px;
     text-align: center;
 }
-

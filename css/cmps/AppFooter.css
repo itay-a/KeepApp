@@ -1,5 +1,4 @@
 .app-footer {
-    position: fixed;
     bottom: 0px;
     width: 100vw;
     min-height: 100px;
@@ -8,13 +7,14 @@
     align-items: center;
     background-color: lightskyblue;
     color: black;
+    margin-top: 5px;
   }
 
   h1 {
     padding-left: 30px;
   }
   
-  p {
+  span {
     padding-right: 30px;
   }
 

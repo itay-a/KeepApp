@@ -1,21 +1,16 @@
 export class KeepFilter extends React.Component {
   state = {
     filterBy: {
-      type: '',
+      text: '',
+      // type:''
     },
   };
 
-  inputRef = React.createRef()
-
-  componentDidMount() {
-    this.inputRef.current.focus()
-    document.querySelector('input').focus()
-  }
-
   handleChange = (ev) => {
+    console.log(ev.target);
     const field = ev.target.name;
-    const value = ev.target.type;
-    this.setState({ filterBy: { [field]: value } }, () => {
+    const value = (ev.target.type === 'number') ? +ev.target.value : ev.target.value;
+    this.setState({ filterBy: { ...this.state.filterBy, [field]: value } }, () => {
     this.props.onSetFilter(this.state.filterBy)
     });
   };
@@ -26,29 +21,35 @@ export class KeepFilter extends React.Component {
   };
 
   onSelectFilter = (ev) => {
-    const type = ev.target.name;
+    console.log(ev.target.name);
+    const field = ev.target.name;
+    const value = ev.target.value;
+    this.setState({ filterBy: { ...this.state.filterBy, [field]: value } }, () => {
+      this.props.onSetFilter(this.state.filterBy)
+      });
   }
 
   render() {
+    const { text } = this.state.filterBy;
     const { type } = this.state.filterBy;
+
     return (
       <form className='keep-filter-search' onSubmit={this.onFilter}>
-        <label htmlFor='by-Type'>Filter Keeps</label>
+        <label htmlFor='by-text'>Filter</label>
         <input
-          ref={this.inputRef}
-          name='type'
+          name='text'
           id='by-type'
           type='text'
           placeholder='search keeps'
-          value={type}
+          value={text}
           onChange={this.handleChange}
         />
-        <select className="keep-filter-drop" onKeyUp={this.onSelectFilter}>
-          <option value="1">Select Filter</option>
-          <option value="2">Text Keep</option>
-          <option value="3">video Keep</option>
-          <option value="4">Photo Keep</option>
-          <option value="5">Todo Keep</option>
+        <select className="keep-filter-drop" onSelect={this.onSelectFilter}>
+          <option value="">Select Filter</option>
+          <option value="note-txt">Text</option>
+          <option value="note-img">video</option>
+          <option value="note-todos">Photo</option>
+          {/* <option value="note-video">Todo</option> */}
         </select>
 
       </form>
