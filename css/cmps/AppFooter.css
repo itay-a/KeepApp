@@ -8,6 +8,8 @@
     background-color: lightskyblue;
     color: black;
     margin-top: 5px;
+   flex-basis: 0px;
+
   }
 
   h1 {
@@ -18,7 +20,7 @@
     padding-right: 30px;
   }
 
-  .input-container {
+  /* .input-container {
     background-color: aliceblue;
     display: flex;
     gap: 10px;
@@ -30,4 +32,4 @@
     height: 50px;
     cursor: pointer;
     margin: 5px;
-  }
+  } */

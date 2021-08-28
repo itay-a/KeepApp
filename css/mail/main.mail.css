@@ -43,12 +43,19 @@
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 
+<<<<<<< HEAD
 .flex input{ 
   width: 20%;
   height: 3vh;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
   margin-left: 22px;
   
+=======
+input{ 
+  width: 100%;
+  padding: 12px 12px;
+  box-sizing: border-box;
+>>>>>>> ec34abdd25ef33ea63f4afe5d1564b525d29b1ad
 }
 
 .mail-filter button {

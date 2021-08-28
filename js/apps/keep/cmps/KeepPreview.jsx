@@ -6,12 +6,10 @@ import { eventBusService} from '../../../services/event-bus-service.js'
 export class KeepPreview extends React.Component {
 
     get keepType() {
-        console.log(this.props.keep.type);
         return this.props.keep.type;
     }
 
     onDeletePreview = (id) => {
-        console.log(id);
         eventBusService.emit('on-delete-keep', id)
     }
 

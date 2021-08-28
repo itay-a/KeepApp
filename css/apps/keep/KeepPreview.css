@@ -8,6 +8,8 @@
 
 .keep .keep-text {
     background-color: khaki;
+    text-align: center;
+    text-overflow: ellipsis;
 }
 
 .preview-nav {
@@ -15,6 +17,18 @@
     flex-direction: row;
     justify-content: space-around;
     padding-left: 5px;
+}
+
+.preview-nav input {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.preview-nav button {
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
 }
 
 .keep-preview {
@@ -32,23 +46,29 @@
 
 .delete-btn {
     height: 20px;
-    background-color:sandybrown;
+    background-color: sandybrown;
     margin-left: 5px;
     margin-right: 5px;
-    margin-top: 0px;
+    margin-top: 5px;
     border-radius: 5px;
     border: none;
+    padding: 3px;
+    width: 50px;
 }
 
 .delete-btn:hover {
     background-color: tomato;
-
 }
 
-form button {
+.form-add button {
     height: 40px;
-    background-color: palegreen;
+    background-color: lightskyblue;
     border-radius: 5px;
+    border: none;
+}
+
+.form-add button:hover {
+    background-color: deepskyblue;
 }
 
 .add-btn button {
@@ -60,9 +80,9 @@ form button {
     border-radius: 5px;
     border: none;
 }
-.add-btn button:hover {
-    background-color:deepskyblue;
 
+.add-btn button:hover {
+    background-color: deepskyblue;
 }
 
 .keep-preview img {
@@ -87,16 +107,26 @@ form button {
 .keep-filter-search {
     padding: 0px;
     border-radius: 5px;
+    display: flex;
 }
 
-input {
+/* input {
     border: none;
     height: 40px;
     border-radius: 5px;
-}
+    padding: 0px;
+} */
 
 select {
     border: none;
     height: 40px;
     border-radius: 5px;
+}
+
+#by-type {
+    border: none;
+    height: 40px;
+    border-radius: 5px;
+    padding: unset;
+    padding-right: 5px;
 }

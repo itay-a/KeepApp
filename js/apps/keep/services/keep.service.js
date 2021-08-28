@@ -124,7 +124,6 @@ function deleteKeep(keepId) {
 }
 
 function addKeep(newKeep) {
-    console.log(newKeep);
 notes.push(newKeep);
 _saveNotesToStorage(KEY, notes);
 }
