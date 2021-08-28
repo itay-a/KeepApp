@@ -6,53 +6,83 @@
 
 .mail-list{
   margin-left: 10px;
-  width: 60%;
+  width: 82%;
   gap: 9px;
 }
 
 .mail-preview{
   /* text-align: left; */
-  border: 0.1px solid;
-    margin: 1px;
+    border: 1px burlywood;
+    
+    margin: 2px;
     border-radius: 7px;
     background-color:rgb(255, 255, 255);
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
     padding: 2px;
     text-align: center; 
+  
+}
+
+.mail-preview:hover{
+  background-color:beige;
 }
 
 .mail-preview h3 {
+    font-weight: 410;
+    color: black;
     text-align: left;
     cursor:pointer;
 }
-
+.mail-filter{
+  margin-bottom: 2px;
+}
 .mail-filter input{
   margin-left: 22px;
   width: 20%;
-  height: 10%;
+  height: 3vh;
   box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 
-input{ 
-  width: 100%;
-  padding: 12px 12px;
-  margin: 8px 0;
-  box-sizing: border-box;
+.flex input{ 
+  width: 20%;
+  height: 3vh;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+  margin-left: 22px;
+  
 }
 
-button {
-  content: '📧';
-  padding: 12px 12px;
+.mail-filter button {
+  border: none;
+  margin-left: 5px;
+  background-color:lightskyblue;
+  background-color: none;
+  height: 3.2vh;
   cursor: pointer;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+.flex button{
+  margin-left: 5px;
+  border: none;
+  cursor: pointer;
+  background-color:lightskyblue;
+  height: 3.2vh;
+  box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
 }
 
-.app-footer h1{
-  content: '📧';
+.mail-filter span{
+  font-size:50px;
+  
 }
 
-/* .add-filter{
+.mail-details{
+  font-size: large;
+}
 
-} */
-.compose-mail {
-  margin-left: 10px;
+.mail-details button{
+  size: 5px;
+  border-radius: 20%;
+  margin-left: 15px;
+}
+button:hover{
+  background-color:rgb(216, 213, 213);
 }
