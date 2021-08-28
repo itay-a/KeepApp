@@ -16,16 +16,13 @@ export class KeepAdd extends React.Component {
     }
 
     handleTextChange = (ev) => {
-        console.log(ev.target.name);
         const field = ev.target.name;
         const value = (ev.target.type === 'number') ? +ev.target.value : ev.target.value;
         this.setState({ ...this.state.keepText, [field]: value  })
     };
 
     handleAddKeep = (ev) => {
-        console.log('iatuy');
         ev.preventDefault();
-        console.log(this.state);
         this.props.onAddKeep(this.state)
     }
 
@@ -42,7 +39,7 @@ export class KeepAdd extends React.Component {
                 {
                     (this.state.keepType === 'text-keep')
                         ?
-                        <form onSubmit={this.handleAddKeep}>
+                        <form className="form-add" onSubmit={this.handleAddKeep}>
                             <input name="keepTitle" type='text' placeholder='Enter title' onChange={this.handleTextChange}></input>
                             <input name="keepText" type='text' placeholder='Enter text' onChange={this.handleTextChange}></input>
                             <button>Add</button>
@@ -53,7 +50,7 @@ export class KeepAdd extends React.Component {
                 {
                     (this.state.keepType === 'img-keep') 
                     ?
-                        <form onSubmit={this.handleAddKeep}>
+                        <form className="form-add" onSubmit={this.handleAddKeep}>
                             <input name='keepTitle' type='text' placeholder='Insert picture title' onChange={this.handleTextChange}></input>
                             <input name='keepImg' type='text' placeholder='Insert picture link' onChange={this.handleTextChange}></input>
                             <button>Add</button>
@@ -65,7 +62,7 @@ export class KeepAdd extends React.Component {
                 {
                     (this.state.keepType === 'todo-keep') 
                     ?
-                        <form onSubmit={this.handleAddKeep}>
+                        <form className="form-add" onSubmit={this.handleAddKeep}>
                             <input name='keepLabel' type='text' placeholder='Insert todos label' onChange={this.handleTextChange}></input>
                             <input name='keepTodo' type='text' placeholder='Insert todo text' onChange={this.handleTextChange}></input>
                             <button>Add</button>

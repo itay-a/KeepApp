@@ -7,7 +7,6 @@ export class KeepFilter extends React.Component {
   };
 
   handleChange = (ev) => {
-    console.log(ev.target);
     const field = ev.target.name;
     const value = (ev.target.type === 'number') ? +ev.target.value : ev.target.value;
     this.setState({ filterBy: { ...this.state.filterBy, [field]: value } }, () => {
@@ -21,7 +20,6 @@ export class KeepFilter extends React.Component {
   };
 
   onSelectFilter = (ev) => {
-    console.log(ev.target.name);
     const field = ev.target.name;
     const value = ev.target.value;
     this.setState({ filterBy: { ...this.state.filterBy, [field]: value } }, () => {
@@ -35,7 +33,7 @@ export class KeepFilter extends React.Component {
 
     return (
       <form className='keep-filter-search' onSubmit={this.onFilter}>
-        <label htmlFor='by-text'>Filter</label>
+        <label htmlFor='by-text'></label>
         <input
           name='text'
           id='by-type'
@@ -45,7 +43,7 @@ export class KeepFilter extends React.Component {
           onChange={this.handleChange}
         />
         <select className="keep-filter-drop" onSelect={this.onSelectFilter}>
-          <option value="">Select Filter</option>
+          <option value="">Select category</option>
           <option value="note-txt">Text</option>
           <option value="note-img">video</option>
           <option value="note-todos">Photo</option>

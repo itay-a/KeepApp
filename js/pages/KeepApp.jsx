@@ -25,9 +25,6 @@ export class KeepApp extends React.Component {
   loadKeeps = () => {
     keepService.query(this.state.filterBy).then((keeps) => {
       this.setState({ keeps });
-      // console.log(this.state.filterBy);
-      // console.log(keeps);
-      // console.log(this.state.keeps);
     });
   };
 
@@ -48,7 +45,6 @@ export class KeepApp extends React.Component {
         info: { txt: keepToAdd.keepText, title: keepToAdd.keepTitle }
 
       }
-      console.log(newKeep);
     }
     if (keepToAdd.keepType === 'img-keep') {
       newKeep = {
@@ -59,7 +55,6 @@ export class KeepApp extends React.Component {
         info: { url: keepToAdd.keepImg, title: keepToAdd.keepTitle }
 
       }
-      console.log(newKeep);
     }
     if (keepToAdd.keepType === 'todo-keep') {
       newKeep = {
@@ -72,30 +67,14 @@ export class KeepApp extends React.Component {
            ]
           }
       }
-      console.log(newKeep);
     }
     keepService.addKeep(newKeep)
     this.loadKeeps()
 
   }
 
-//   {
-//     id: "n105",
-//     type: "note-todos",
-//     info: {
-//         label: "Get my stuff together",
-//         todos: [
-//             { txt: "Driving liscence", doneAt: null },
-//             { txt: "Coding power", doneAt: 187111111 }
-//         ]
-//     }
-// },
-
-
-
   render() {
-    // console.log(this.state.keeps);
-    // const { keeps } = this.state
+
     if (!this.state.keeps) return <div>Loading...</div>
     return (
       <section className='keep-app'>
