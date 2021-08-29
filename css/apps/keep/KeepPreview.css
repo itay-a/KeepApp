@@ -2,7 +2,7 @@
     width: fit-content;
     padding: 10px;
     border-radius: 10px;
-    background-color: lightskyblue;
+    background-color: gainsboro;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -22,10 +22,12 @@
     background-color: firebrick;
     text-align: center;
 }
+
 .keep .keep-img {
     display: flex;
     flex-direction: column;
     background-color: black;
+    color: white;
     text-align: center;
 }
 
@@ -156,7 +158,14 @@ select {
     color: black;
 }
 
-.todo-p{
-text-align: left;
-width: 100%;
+.todo-p {
+    text-align: left;
+    width: 100%;
+}
+
+.form-add input {
+    height: 35px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
 }

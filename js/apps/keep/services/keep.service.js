@@ -12,30 +12,41 @@ export const keepService = {
 }
 
 let notes = [
-
+    
+    {
+        id: "n105",
+        type: "note-todos",
+        info: {
+            label: "To do",
+            todos: [
+                { txt: "Nothing special today", doneAt: null },
+                { txt: "Lots of rest not API", doneAt: 187111111 }
+            ]
+        }
+    },
     {
         id: "n101",
         type: "note-txt",
         isPinned: true,
-        info: { txt: "The Canaan Dog is a breed of pariah dog abundant all over the Middle East. It can be found in Israel, Jordan, Lebanon, and the Sinai Peninsula, and these or dogs very similar are found in Egypt, Iraq, and Syria.[3] It is the national dog of Israel.[4] As of 2012, there were 2,000 to 3,000 Canaan Dogs across the world, mostly in Europe and North America.", title: "Canaan Dog" }
-    },
-    {
-        id: "n104",
-        type: "note-img",
-        info: { url:"https://www.burger-il.com/wp-content/uploads/2021/01/%D7%A6%D7%90%D7%A4%D7%95-%D7%A8%D7%9E%D7%AA-%D7%92%D7%9F-3-420x420.jpg" , title: "Breakfast" },
-        style: { backgroundColor: "#ffffff" }
+        info: { txt: "The Canaan Dog is a breed of pariah dog abundant all over the Middle East. It can be found in Israel, Jordan, Lebanon, and the Sinai Peninsula, and these or dogs very similar are found in Egypt, Iraq, and Syria. It is the national dog of Israel. As of 2012, there were 2,000 to 3,000 Canaan Dogs across the world, mostly in Europe and North America.", title: "Canaan Dog" }
     },
     {
         id: "n108",
         type: "note-video",
         info: { url: "https://www.youtube.com/embed/N9wsjroVlu8", title: "Break something" },
-        style: { backgroundColor: "#ffffff" }
+        style: { backgroundColor: "#b22222" }
+    },
+    {
+        id: "n104",
+        type: "note-img",
+        info: { url:"https://www.burger-il.com/wp-content/uploads/2021/01/%D7%A6%D7%90%D7%A4%D7%95-%D7%A8%D7%9E%D7%AA-%D7%92%D7%9F-3-420x420.jpg" , title: "Breakfast" },
+        style: { backgroundColor: "#000000" }
     },
     {
         id: "n107",
         type: "note-img",
         info: { url: "https://images.fineartamerica.com/images-medium-large-5/tropical-sandy-beach-with-coconut-trees-apomares.jpg", title: "My next trip" },
-        style: { backgroundColor: "#ffffff" }
+        style: { backgroundColor: "#000000" }
     },
 
     {
@@ -48,20 +59,9 @@ let notes = [
         id: "n120",
         type: "note-video",
         info: { url: "https://www.youtube.com/embed/OrzgxUhnYjY", title: "I know React..." },
-        style: { backgroundColor: "#ffffff" }
+        style: { backgroundColor: "#b22222" }
     },
 
-    {
-        id: "n105",
-        type: "note-todos",
-        info: {
-            label: "Get my stuff together",
-            todos: [
-                { txt: "Driving liscence", doneAt: null },
-                { txt: "Coding power", doneAt: 187111111 }
-            ]
-        }
-    },
     {
         id: "n106",
         type: "note-todos",
