@@ -7,7 +7,8 @@ const KEY = 'noteDB';
 export const keepService = {
     query,
     deleteKeep,
-    addKeep
+    addKeep,
+    embedVideo
 }
 
 let notes = [
@@ -35,21 +36,20 @@ let notes = [
         id: "n104",
         type: "note-img",
         info: { url: "https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2019/10/08113321/Dog-behavior-Kasper-Luijsterburg.jpg", title: "Bobi and Me" },
-        style: { backgroundColor: "#00d" }
+        style: { backgroundColor: "#ffffff" }
     },
     {
         id: "n107",
         type: "note-img",
         info: { url: "https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2019/10/08113321/Dog-behavior-Kasper-Luijsterburg.jpg", title: "Bobi and Me" },
-        style: { backgroundColor: "#00d" }
+        style: { backgroundColor: "#ffffff" }
     },
     {
         id: "n108",
-        type: "note-img",
-        info: { url: "https://s3-us-west-2.amazonaws.com/uw-s3-cdn/wp-content/uploads/sites/6/2019/10/08113321/Dog-behavior-Kasper-Luijsterburg.jpg", title: "Bobi and Me" },
-        style: { backgroundColor: "#00ff99" }
+        type: "note-video",
+        info: { url: "https://www.youtube.com/embed/N9wsjroVlu8", title: "embed" },
+        style: { backgroundColor: "#ffffff" }
     },
-
     {
         id: "n105",
         type: "note-todos",
@@ -81,7 +81,7 @@ function query(filterBy) {
     if (filterBy) {
         let filteredNotes = [];
 
-         notes.forEach(note => {
+        notes.forEach(note => {
             switch (note.type) {
                 case 'note-txt':
                     if (note.info.txt.toLowerCase().includes(filterBy.text)) { filteredNotes.push(note) }
@@ -116,16 +116,21 @@ function getKeepById(idx) {
     return notes.findIndex(note => note.id === idx)
 }
 
+function embedVideo(videoLink) {
+    let fixedLink = videoLink.split('?v=')
+    return `https://www.youtube.com/embed/${fixedLink[1]}`
+}
+
 function deleteKeep(keepId) {
     let noteIdx = getKeepById(keepId)
-    notes.splice(noteIdx,1);
+    notes.splice(noteIdx, 1);
     _saveNotesToStorage()
     return Promise.resolve()
 }
 
 function addKeep(newKeep) {
-notes.push(newKeep);
-_saveNotesToStorage(KEY, notes);
+    notes.push(newKeep);
+    _saveNotesToStorage(KEY, notes);
 }
 
 function _saveNotesToStorage() {

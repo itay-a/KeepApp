@@ -1,15 +1,37 @@
 .keep {
+    width: fit-content;
     padding: 10px;
     border-radius: 10px;
     background-color: lightskyblue;
-    /* display: flex;
-    flex-direction: column; */
+    display: flex;
+    justify-content: space-between;
 }
 
 .keep .keep-text {
+    display: flex;
+    flex-direction: column;
     background-color: khaki;
     text-align: center;
-    text-overflow: ellipsis;
+}
+
+.keep .keep-video {
+    display: flex;
+    flex-direction: column;
+    background-color: firebrick;
+    text-align: center;
+}
+.keep .keep-img {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    text-align: center;
+}
+
+.keep .keep-todo {
+    display: flex;
+    flex-direction: column;
+    background-color: salmon;
+    text-align: center;
 }
 
 .preview-nav {
@@ -19,10 +41,11 @@
     padding-left: 5px;
 }
 
-.preview-nav input {
+.preview-nav input #by-type {
     border: none;
     border-radius: 5px;
-    margin: 5px;
+    color: black;
+    padding-left: 5px;
 }
 
 .preview-nav button {
@@ -34,7 +57,9 @@
 .keep-preview {
     display: flex;
     flex-wrap: wrap;
-    width: 200px;
+    width: fit-content;
+    max-width: 400px;
+    height: fit-content;
     padding: 10px;
     border-radius: 10px;
 }
@@ -54,6 +79,7 @@
     border: none;
     padding: 3px;
     width: 50px;
+    display: flex;
 }
 
 .delete-btn:hover {
@@ -95,13 +121,14 @@
 }
 
 .keep-list {
-    /* width: 1000px; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 10px;
     justify-content: center;
     margin-top: 30px;
+    margin-bottom: 150px;
+    margin-top: 50px;
 }
 
 .keep-filter-search {
@@ -109,13 +136,6 @@
     border-radius: 5px;
     display: flex;
 }
-
-/* input {
-    border: none;
-    height: 40px;
-    border-radius: 5px;
-    padding: 0px;
-} */
 
 select {
     border: none;
@@ -129,4 +149,6 @@ select {
     border-radius: 5px;
     padding: unset;
     padding-right: 5px;
+    padding-left: 5px;
+    color: black;
 }

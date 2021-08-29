@@ -1,7 +1,8 @@
 import { KeepTxt } from './KeepTxt.jsx';
 import { KeepImg } from './KeepImg.jsx';
-import {KeepTodo } from './KeepTodo.jsx';
-import { eventBusService} from '../../../services/event-bus-service.js' 
+import { KeepTodo } from './KeepTodo.jsx';
+import { KeepVideo } from './KeepVideo.jsx';
+import { eventBusService } from '../../../services/event-bus-service.js'
 
 export class KeepPreview extends React.Component {
 
@@ -23,6 +24,8 @@ export class KeepPreview extends React.Component {
                     return <KeepImg {...props} />
                 case 'note-todos':
                     return <KeepTodo {...props} />
+                case 'note-video':
+                    return <KeepVideo {...props} />
             }
         }
         const { props } = this;

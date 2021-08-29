@@ -8,7 +8,7 @@ export class KeepAdd extends React.Component {
         keepLabel: '',
         keepImg:'',
         keepTodo:'',
-
+        keepVideo:'',
     }
 
     onSelectType = (keepType) => {
@@ -23,18 +23,19 @@ export class KeepAdd extends React.Component {
 
     handleAddKeep = (ev) => {
         ev.preventDefault();
+        this.onSelectType()
         this.props.onAddKeep(this.state)
     }
-
 
     render() {
 
         return (
             <div>
                 <div className="add-btn">
-                    <button onClick={() => { this.onSelectType('text-keep') }}>Text Keep</button>
-                    <button onClick={() => { this.onSelectType('img-keep') }}>Picture Keep</button>
-                    <button onClick={() => { this.onSelectType('todo-keep') }}>Todo Keep</button>
+                    <button onClick={() => { this.onSelectType('text-keep') }}>Add Text Keep</button>
+                    <button onClick={() => { this.onSelectType('img-keep') }}>Add Picture Keep</button>
+                    <button onClick={() => { this.onSelectType('todo-keep') }}>Add Todo Keep</button>
+                    <button onClick={() => { this.onSelectType('video-keep') }}>Add Video Keep</button>
                 </div>
                 {
                     (this.state.keepType === 'text-keep')
@@ -65,6 +66,18 @@ export class KeepAdd extends React.Component {
                         <form className="form-add" onSubmit={this.handleAddKeep}>
                             <input name='keepLabel' type='text' placeholder='Insert todos label' onChange={this.handleTextChange}></input>
                             <input name='keepTodo' type='text' placeholder='Insert todo text' onChange={this.handleTextChange}></input>
+                            <button>Add</button>
+
+                        </form>
+                        : ""
+
+                }
+                {
+                    (this.state.keepType === 'video-keep') 
+                    ?
+                        <form className="form-add" onSubmit={this.handleAddKeep}>
+                            <input name='keepTitle' type='text' placeholder='Insert video title' onChange={this.handleTextChange}></input>
+                            <input name='keepVideo' type='text' placeholder='Insert YouTube link' onChange={this.handleTextChange}></input>
                             <button>Add</button>
 
                         </form>

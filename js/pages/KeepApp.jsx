@@ -68,6 +68,16 @@ export class KeepApp extends React.Component {
           }
       }
     }
+    if (keepToAdd.keepType === 'video-keep') {
+      newKeep = {
+
+        id: utilService.makeId(),
+        type: "note-video",
+        isPinned: true,
+        info: { url: keepService.embedVideo(keepToAdd.keepVideo), title: keepToAdd.keepTitle }
+
+      }
+    }
     keepService.addKeep(newKeep)
     this.loadKeeps()
 
