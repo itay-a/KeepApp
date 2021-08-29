@@ -5,6 +5,7 @@
     background-color: lightskyblue;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .keep .keep-text {

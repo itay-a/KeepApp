@@ -31,7 +31,7 @@ export class KeepPreview extends React.Component {
         const { props } = this;
 
         return (
-            <div className="keep flex-column">
+            <div className="keep">
                 <DynamicCmp {...props} />
                 <button className="delete-btn" onClick={() => this.onDeletePreview(this.props.keep.id)}>Delete</button>
             </div>
