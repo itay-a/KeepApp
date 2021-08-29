@@ -25,16 +25,15 @@ export class MailAdd extends React.Component {
 
     render() {
         const { subject, body } = this.state.newMail
-        return <section className="new-mail flex">
+        return <section className="new-mail">
             {/* <Link to="/mail"><i className="fas fa-arrow-left" title="Go to inbox"></i></Link> */}
-            <h1>New mail</h1>
             <div className="compose-mail">
-                <button onClick={() => { on }}></button>
+                {/* <button onClick={() => { on }}></button> */}
                 <form className="flex" onSubmit={this.onSendMail}>
                     {/* <input type="email" name="to" placeholder="To" value={to} required onChange={this.onHandlechange} /> */}
                     <input type="text" name="subject" placeholder="Subject"  onChange={this.onHandlechange} />
-                    <textarea placeholder="Text goes here" name="body"  onChange={this.onHandlechange}></textarea>
-                    <button>Send</button>
+                    {/* <textarea placeholder="Text goes here" name="body"  onChange={this.onHandlechange}></textarea> */}
+                    <button>Compose Email</button>
                 </form>
             </div>
         </section>
