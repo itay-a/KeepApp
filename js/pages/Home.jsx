@@ -8,12 +8,6 @@ export function Home() {
                 <div className="link" >
                     <Link to="/keep">Keeps</Link>
                 </div>
-                <div className="link">
-                    <Link to="/mail">Email</Link>
-                </div>
-                <div className="link">
-                <Link to="/">Books</Link>
-                </div>
             </div>
         </section>
     )

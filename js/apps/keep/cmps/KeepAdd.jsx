@@ -18,7 +18,7 @@ export class KeepAdd extends React.Component {
     handleTextChange = (ev) => {
         const field = ev.target.name;
         const value = (ev.target.type === 'number') ? +ev.target.value : ev.target.value;
-        this.setState({ ...this.state.keepText, [field]: value  })
+        this.setState({ ...this.state.keepText, [field]: value  }) //try delete keepText so title will update too
     };
 
     handleAddKeep = (ev) => {

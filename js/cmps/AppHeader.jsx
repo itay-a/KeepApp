@@ -9,7 +9,6 @@ class _AppHeader extends React.Component {
                 <nav>
                     <NavLink exact to="/" >Home</NavLink>
                     <NavLink to="/keep" >My Keeps</NavLink>
-                    <NavLink to="/mail" >My Mail</NavLink>
                     <NavLink to="/about" >About</NavLink>
                 </nav>
             </section>
