@@ -5,7 +5,7 @@ class _AppHeader extends React.Component {
     render() {
         return (
             <section className="app-header">
-                <h1 onClick={() => this.props.history.goBack()}>Appsus</h1>
+                <h1 onClick={() => this.props.history.goBack()}>KeepApp</h1>
                 <nav>
                     <NavLink exact to="/" >Home</NavLink>
                     <NavLink to="/keep" >My Keeps</NavLink>
